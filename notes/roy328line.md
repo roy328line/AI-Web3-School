@@ -15,6 +15,37 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今日學習：深讀 Agent Identity 模組
+
+GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-26.md
+
+## 核心整理
+
+**Agent Identity** 不是給 Agent 起個名字，而是讓用戶、服務和其他 Agent 能驗證：它是誰、誰控制它、能提供什麼能力、服務入口在哪裡。核心是把 Agent 從臨時會話變成可發現、可驗證、可追責的經濟參與者。
+
+**第一性原理**：Agent 身份必須綁定控制權、能力聲明和服務入口，而不只是一個顯示名稱。三個基本要求：身份要可解析、控制權要可證明、能力要可驗證。
+
+**Agent Profile**：包含名稱、描述、服務範圍、錢包地址、能力列表、owner 等，同時服務人和機器。更新歷史很重要，更新記錄本身就是信任信號。
+
+**Capability**：越具體越有用，需寫明輸入類型、輸出格式、是否需要錢包權限、最長執行時間、失敗退款方式，並按風險分級（只讀/生成草稿/自動執行）。
+
+**Service Endpoint**：安全性直接影響身份可信度，Endpoint 更新應需要 owner 簽名並保留歷史記錄。
+
+**Registry**：用來登記、發現和更新 Agent 身份，能證明「這個身份是誰注册的」，但不能證明「這個 Agent 一定好用或安全」。
+
+**DID / VC**：DID 表達跨平台可解析身份，VC 表達由 issuer 簽發的可驗證聲明（如能力測試通過、組織隸屬）。VC 的可信度取決於 issuer。
+
+**A2A**：Agent 間通信協議，是通信層而非身份層。支付場景中需與 Payment Intent、Receipt、Escrow 狀態關聯。
+
+**Ownership**：決定誰能更新 Profile、收款地址、Endpoint。高價值 Agent 不應由單個熱錢包控制，建議 operator/owner 分離。
+
+## 核心發想
+
+Agent Identity 把身份從「名字」提升到「可驗證的能力邊界和控制權結構」——不需要信任一個 Agent「是好的」，只需要能驗證它能做什麼、誰負責、失敗怎麼辦。DID/VC 讓 Agent 能累積跨平台可攜帶的「學歷和履歷」，是 Agentic Economy 的基礎設施。
+
+<!-- DAILY_CHECKIN_2026-05-26_END -->
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
 今日學習：深讀 AI x Web3 School Handbook 模組 A（LLM / Prompt / Context / Agent）+ 模組 B（Wallet / Smart Contract / Account Abstraction）
