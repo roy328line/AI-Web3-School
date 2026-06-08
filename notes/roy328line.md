@@ -36,6 +36,23 @@ AI x Web3 School
 
 
 <!-- Content_START -->
+# 2026-06-08
+<!-- DAILY_CHECKIN_2026-06-08_START -->
+今日學習：Week 4 Hackathon Build Day 3 | Demo 端對端測試 + Pitch 敘事架構
+
+核心主題：完成 AI Security Hackathon Demo 的端對端測試，並確立 Demo Pitch 的核心敘事框架。
+
+端對端測試與修復：今日對整個 Demo Pipeline 進行第一輪完整測試。Prompt Injection 檢測器發現邊界案例——攻擊者將惡意指令嵌入 JSON 格式的「數據回傳」時，語義差異比對準確率下降。修復策略：在 JSON 解析層之前先做結構化內容提取，對 text field 單獨檢測，而非對原始字串操作。Tool Call 白名單三層驗證通過測試，金額等於上限的 edge case 現在能正確處理。
+
+Pitch 敘事架構：確定三段式結構。第一段「問題」：AI Agent 最大風險不是 AI 犯錯，而是 AI 被操控執行不可逆的鏈上操作——一行惡意文字可能導致真實資產永久損失。第二段「解法」：Defense-in-Depth 四層防禦，每層假設上層可能失效，形成縱深保護。第三段「獨特性」：鏈上審計日誌天然不可篡改，結合 ZK Proof 可做「可驗證的安全聲明」——不是「信任我們的 AI」，而是「自行驗證每筆操作都在授權邊界內」。
+
+IPFS 審計日誌接入：完成審計日誌寫入 IPFS 初版實作。每次 Tool Call 決策後將結構化 JSON 上傳至 IPFS，返回 CID 作為不可篡改的操作證明。後續計劃批次將 CID 提交至鏈上合約，形成完整可驗證的審計鏈。
+
+核心洞察：真正的 AI Security 不是「讓 AI 不犯錯」，而是「讓 AI 的每個決策都可被事後驗證和追責」。從「信任提供商」升級為「驗證行為」，這從根本上改變了 AI x Web3 的信任假設。
+
+明日計劃：完善 Demo 視覺化介面（展示實時攻擊攔截 + 審計日誌流），準備 Hackathon Final Demo Day 現場演示流程。
+<!-- DAILY_CHECKIN_2026-06-08_END -->
+
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 今日學習：Week 4 Hackathon Build Day 2 | AI Privacy 核心概念 + Hackathon Demo 實作進展
